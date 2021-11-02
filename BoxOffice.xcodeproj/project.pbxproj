@@ -20,6 +20,8 @@
 		D56E9C44273169F4002A4B04 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C43273169F4002A4B04 /* TextFieldEffects */; };
 		D56E9C462731D122002A4B04 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */; };
 		D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C482731D3A3002A4B04 /* RealmModel.swift */; };
+		D56E9C4F2731DBAF002A4B04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C4E2731DBAF002A4B04 /* Constants.swift */; };
+		D56E9C512731DBF7002A4B04 /* MovieAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C502731DBF7002A4B04 /* MovieAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		D56E9C302731676D002A4B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
 		D56E9C482731D3A3002A4B04 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		D56E9C4E2731DBAF002A4B04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D56E9C502731DBF7002A4B04 /* MovieAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		D56E9C212731676B002A4B04 /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
+				D56E9C4D2731DB9F002A4B04 /* API */,
 				D56E9C472731D36A002A4B04 /* Realm */,
 				D56E9C4127316914002A4B04 /* VC */,
 				D56E9C222731676B002A4B04 /* AppDelegate.swift */,
@@ -97,6 +102,15 @@
 				D56E9C482731D3A3002A4B04 /* RealmModel.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		D56E9C4D2731DB9F002A4B04 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D56E9C4E2731DBAF002A4B04 /* Constants.swift */,
+				D56E9C502731DBF7002A4B04 /* MovieAPIManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +202,8 @@
 				D56E9C252731676B002A4B04 /* SceneDelegate.swift in Sources */,
 				D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */,
 				D56E9C462731D122002A4B04 /* BoxOfficeTableViewCell.swift in Sources */,
+				D56E9C512731DBF7002A4B04 /* MovieAPIManager.swift in Sources */,
+				D56E9C4F2731DBAF002A4B04 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

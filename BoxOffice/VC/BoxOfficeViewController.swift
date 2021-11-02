@@ -33,6 +33,21 @@ class BoxOfficeViewController: UIViewController {
     
     @objc func retrieveBoxOffice(){
         
+        MovieAPIManager.shared.fetchBoxOfficeData(targetDt: "20210401") { code, json in
+           
+            switch code {
+            case 200:
+                print(json)
+               // for i in json[]
+               // self.translateText = json["message"]["result"]["translatedText"].stringValue
+            case 400:
+                print(json)
+               // self.translateText = json["errorMessage"].stringValue
+            default :
+                print("ERROR")
+            }
+        }
+        
     }
 
 }

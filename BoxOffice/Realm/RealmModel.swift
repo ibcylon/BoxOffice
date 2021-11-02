@@ -11,14 +11,15 @@ import RealmSwift
 class BoxOfficeModel: Object {
     @Persisted var title: String
     @Persisted var rank: Int
-    @Persisted var releaseDate: Date
-    
-    convenience init(title:String, rank:Int, releaseDate:Date){
+    @Persisted var releaseDate = Date()
+    @Persisted(primaryKey: true) var targetDt:String
+    convenience init(title:String, rank:Int, releaseDate:Date, targetDt:String){
         
         self.init()
         
         self.title = title
         self.rank = rank
         self.releaseDate = releaseDate
+        self.targetDt = targetDt
     }
 }
