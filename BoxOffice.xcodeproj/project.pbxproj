@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		D56E9C232731676B002A4B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C222731676B002A4B04 /* AppDelegate.swift */; };
 		D56E9C252731676B002A4B04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C242731676B002A4B04 /* SceneDelegate.swift */; };
-		D56E9C272731676B002A4B04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C262731676B002A4B04 /* ViewController.swift */; };
+		D56E9C272731676B002A4B04 /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C262731676B002A4B04 /* BoxOfficeViewController.swift */; };
 		D56E9C2A2731676B002A4B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E9C282731676B002A4B04 /* Main.storyboard */; };
 		D56E9C2C2731676D002A4B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56E9C2B2731676D002A4B04 /* Assets.xcassets */; };
 		D56E9C2F2731676D002A4B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56E9C2D2731676D002A4B04 /* LaunchScreen.storyboard */; };
+		D56E9C38273168E4002A4B04 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C37273168E4002A4B04 /* Realm */; };
+		D56E9C3A273168E4002A4B04 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C39273168E4002A4B04 /* RealmSwift */; };
+		D56E9C3D273168F6002A4B04 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C3C273168F6002A4B04 /* Alamofire */; };
+		D56E9C402731690A002A4B04 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C3F2731690A002A4B04 /* SwiftyJSON */; };
+		D56E9C44273169F4002A4B04 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = D56E9C43273169F4002A4B04 /* TextFieldEffects */; };
+		D56E9C462731D122002A4B04 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */; };
+		D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C482731D3A3002A4B04 /* RealmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D56E9C1F2731676B002A4B04 /* BoxOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E9C222731676B002A4B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D56E9C242731676B002A4B04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D56E9C262731676B002A4B04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D56E9C262731676B002A4B04 /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 		D56E9C292731676B002A4B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D56E9C2B2731676D002A4B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56E9C2E2731676D002A4B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D56E9C302731676D002A4B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
+		D56E9C482731D3A3002A4B04 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56E9C3D273168F6002A4B04 /* Alamofire in Frameworks */,
+				D56E9C3A273168E4002A4B04 /* RealmSwift in Frameworks */,
+				D56E9C402731690A002A4B04 /* SwiftyJSON in Frameworks */,
+				D56E9C38273168E4002A4B04 /* Realm in Frameworks */,
+				D56E9C44273169F4002A4B04 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,33 @@
 		D56E9C212731676B002A4B04 /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
+				D56E9C472731D36A002A4B04 /* Realm */,
+				D56E9C4127316914002A4B04 /* VC */,
 				D56E9C222731676B002A4B04 /* AppDelegate.swift */,
 				D56E9C242731676B002A4B04 /* SceneDelegate.swift */,
-				D56E9C262731676B002A4B04 /* ViewController.swift */,
 				D56E9C282731676B002A4B04 /* Main.storyboard */,
+				D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */,
 				D56E9C2B2731676D002A4B04 /* Assets.xcassets */,
 				D56E9C2D2731676D002A4B04 /* LaunchScreen.storyboard */,
 				D56E9C302731676D002A4B04 /* Info.plist */,
 			);
 			path = BoxOffice;
+			sourceTree = "<group>";
+		};
+		D56E9C4127316914002A4B04 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D56E9C262731676B002A4B04 /* BoxOfficeViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D56E9C472731D36A002A4B04 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				D56E9C482731D3A3002A4B04 /* RealmModel.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,13 @@
 			dependencies = (
 			);
 			name = BoxOffice;
+			packageProductDependencies = (
+				D56E9C37273168E4002A4B04 /* Realm */,
+				D56E9C39273168E4002A4B04 /* RealmSwift */,
+				D56E9C3C273168F6002A4B04 /* Alamofire */,
+				D56E9C3F2731690A002A4B04 /* SwiftyJSON */,
+				D56E9C43273169F4002A4B04 /* TextFieldEffects */,
+			);
 			productName = BoxOffice;
 			productReference = D56E9C1F2731676B002A4B04 /* BoxOffice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,12 @@
 				Base,
 			);
 			mainGroup = D56E9C162731676B002A4B04;
+			packageReferences = (
+				D56E9C36273168E4002A4B04 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				D56E9C3B273168F6002A4B04 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D56E9C3E2731690A002A4B04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D56E9C42273169F4002A4B04 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = D56E9C202731676B002A4B04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D56E9C272731676B002A4B04 /* ViewController.swift in Sources */,
+				D56E9C272731676B002A4B04 /* BoxOfficeViewController.swift in Sources */,
 				D56E9C232731676B002A4B04 /* AppDelegate.swift in Sources */,
 				D56E9C252731676B002A4B04 /* SceneDelegate.swift in Sources */,
+				D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */,
+				D56E9C462731D122002A4B04 /* BoxOfficeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +353,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +381,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -360,6 +407,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D56E9C36273168E4002A4B04 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.18.0;
+			};
+		};
+		D56E9C3B273168F6002A4B04 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D56E9C3E2731690A002A4B04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D56E9C42273169F4002A4B04 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D56E9C37273168E4002A4B04 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56E9C36273168E4002A4B04 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		D56E9C39273168E4002A4B04 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56E9C36273168E4002A4B04 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		D56E9C3C273168F6002A4B04 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56E9C3B273168F6002A4B04 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D56E9C3F2731690A002A4B04 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56E9C3E2731690A002A4B04 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D56E9C43273169F4002A4B04 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56E9C42273169F4002A4B04 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D56E9C172731676B002A4B04 /* Project object */;
 }
