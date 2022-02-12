@@ -22,6 +22,7 @@
 		D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C482731D3A3002A4B04 /* RealmModel.swift */; };
 		D56E9C4F2731DBAF002A4B04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C4E2731DBAF002A4B04 /* Constants.swift */; };
 		D56E9C512731DBF7002A4B04 /* MovieAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E9C502731DBF7002A4B04 /* MovieAPIManager.swift */; };
+		D5E0EB7C27B7A2A50048DADB /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0EB7B27B7A2A50048DADB /* DateFormatter+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D56E9C482731D3A3002A4B04 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		D56E9C4E2731DBAF002A4B04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D56E9C502731DBF7002A4B04 /* MovieAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManager.swift; sourceTree = "<group>"; };
+		D5E0EB7B27B7A2A50048DADB /* DateFormatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				D56E9C4127316914002A4B04 /* VC */,
 				D56E9C222731676B002A4B04 /* AppDelegate.swift */,
 				D56E9C242731676B002A4B04 /* SceneDelegate.swift */,
+				D5E0EB7B27B7A2A50048DADB /* DateFormatter+extension.swift */,
 				D56E9C282731676B002A4B04 /* Main.storyboard */,
 				D56E9C452731D122002A4B04 /* BoxOfficeTableViewCell.swift */,
 				D56E9C2B2731676D002A4B04 /* Assets.xcassets */,
@@ -199,6 +202,7 @@
 			files = (
 				D56E9C272731676B002A4B04 /* BoxOfficeViewController.swift in Sources */,
 				D56E9C232731676B002A4B04 /* AppDelegate.swift in Sources */,
+				D5E0EB7C27B7A2A50048DADB /* DateFormatter+extension.swift in Sources */,
 				D56E9C252731676B002A4B04 /* SceneDelegate.swift in Sources */,
 				D56E9C492731D3A3002A4B04 /* RealmModel.swift in Sources */,
 				D56E9C462731D122002A4B04 /* BoxOfficeTableViewCell.swift in Sources */,

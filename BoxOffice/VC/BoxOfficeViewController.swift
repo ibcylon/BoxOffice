@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import SwiftUI
 
 class BoxOfficeViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class BoxOfficeViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     
+    let datePicker = UIDatePicker()
+    let dateFormatter = DateFormatter.MyFormatter()
     //Realm 객체
     let localRealm = try! Realm()
     var tasks : Results<BoxOfficeModel>!
@@ -25,20 +28,52 @@ class BoxOfficeViewController: UIViewController {
         tableView.dataSource = self
         
         tasks = localRealm.objects(BoxOfficeModel.self)
+        
+        setDatePicker()
+        
+        searchTextField.inputView = datePicker
+    }
+    
+    func setDatePicker(){
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "ko-KR")
+        datePicker.timeZone = .autoupdatingCurrent
+        datePicker.addTarget(self, action: #selector(handleDatePicker), for: .valueChanged)
+    }
+    
+    @objc func handleDatePicker(_ sender: UIDatePicker){
+        
+        searchTextField.text = dateFormatter.string(from: sender.date)
     }
     
     @IBAction func searchButtonClicked(_ sender: UIButton) {
         //boxOfficeDate가 입력값과 동일하면 API 안타게 체크
         searchButton.addTarget(self, action: #selector(retrieveBoxOffice), for: .touchUpInside)
-        tableView.reloadData()
     }
     
     @objc func retrieveBoxOffice(){
+        var inputDate: String
         
-        MovieAPIManager.shared.fetchBoxOfficeData(targetDt: searchTextField.text!) { code, json in
+        guard let text = searchTextField.text else { return }
+        
+        if text.isEmpty {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyyMMdd"
+            guard let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: Date()) else { return }
+            inputDate = dateFormatter.string(from: lastWeek)
+        } else {
+            inputDate = text
+        }
+        
+        MovieAPIManager.shared.fetchBoxOfficeData(targetDt: inputDate) { code, json in
            
             switch code {
             case 200:
+                try! self.localRealm.write {
+                    self.localRealm.deleteAll()
+                }
+                
                 print(json)
                 
                 let movieList = json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue
@@ -56,6 +91,7 @@ class BoxOfficeViewController: UIViewController {
 
                     try! self.localRealm.write {
                         self.localRealm.add(task)
+                        self.tableView.reloadData()
                     }
                 }
                // for i in json[]
