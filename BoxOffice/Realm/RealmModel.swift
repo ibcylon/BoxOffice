@@ -12,7 +12,8 @@ class BoxOfficeModel: Object {
     @Persisted var title: String
     @Persisted var rank: Int
     @Persisted var releaseDate = Date()
-    @Persisted(primaryKey: true) var targetDt:String
+    @Persisted var boxOfficeDate :String
+    @Persisted(primaryKey: true) var id:ObjectId
     convenience init(title:String, rank:Int, releaseDate:Date, targetDt:String){
         
         self.init()
@@ -20,6 +21,6 @@ class BoxOfficeModel: Object {
         self.title = title
         self.rank = rank
         self.releaseDate = releaseDate
-        self.targetDt = targetDt
+        self.boxOfficeDate = targetDt
     }
 }

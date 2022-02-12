@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class MovieAPIManager {
+final class MovieAPIManager {
     
     //싱글톤 패턴
     static let shared = MovieAPIManager()
@@ -20,13 +20,14 @@ class MovieAPIManager {
         
         let parameter = [
             "key":APIKey.MOVIE,
-            "targetDT":targetDt
+            "targetDt":targetDt
         ]
         AF.request(Endpoint.movieURL, method: .get, parameters: parameter).validate(statusCode: 200..<500).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+               
+                print("JSON: \(json["boxOfficeResult"]["dailyBoxOfficeList"])")
                 
                 let code = response.response?.statusCode ?? 500
                 result(code, json)

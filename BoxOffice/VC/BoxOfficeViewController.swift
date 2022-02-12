@@ -28,16 +28,36 @@ class BoxOfficeViewController: UIViewController {
     }
     
     @IBAction func searchButtonClicked(_ sender: UIButton) {
+        //boxOfficeDate가 입력값과 동일하면 API 안타게 체크
         searchButton.addTarget(self, action: #selector(retrieveBoxOffice), for: .touchUpInside)
+        tableView.reloadData()
     }
     
     @objc func retrieveBoxOffice(){
         
-        MovieAPIManager.shared.fetchBoxOfficeData(targetDt: "20210401") { code, json in
+        MovieAPIManager.shared.fetchBoxOfficeData(targetDt: searchTextField.text!) { code, json in
            
             switch code {
             case 200:
                 print(json)
+                
+                let movieList = json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue
+                
+                for movie in movieList {
+                    
+                    let rank = movie["rank"].stringValue
+                    let title = movie["movieNm"].stringValue
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let releaseDate:Date = dateFormatter.date(from: movie["openDt"].stringValue)!
+                    
+                    print(rank, title)
+                    let task = BoxOfficeModel(title: title, rank: Int(rank)!, releaseDate: releaseDate, targetDt: self.searchTextField.text!)
+
+                    try! self.localRealm.write {
+                        self.localRealm.add(task)
+                    }
+                }
                // for i in json[]
                // self.translateText = json["message"]["result"]["translatedText"].stringValue
             case 400:
